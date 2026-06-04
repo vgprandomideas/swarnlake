@@ -390,12 +390,127 @@ textarea {
     radial-gradient(circle at bottom right, rgba(233, 84, 18, 0.08), transparent 24%);
 }
 
+.official-poster {
+  padding-top: 34px;
+}
+
+.poster-masthead {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.poster-title-stack {
+  display: grid;
+  gap: 8px;
+  justify-items: center;
+}
+
+.poster-title-top {
+  color: #163c67;
+  font-size: clamp(1.5rem, 2.4vw, 2.6rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.poster-title-main {
+  margin: 0;
+  font-family: "Rockwell", "Georgia", serif;
+  color: #163c67;
+  font-size: clamp(2.8rem, 6vw, 5.6rem);
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.poster-title-main em {
+  font-style: normal;
+  color: #ea4f0f;
+}
+
+.poster-ribbon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  background: linear-gradient(135deg, #183f6a, #214d83);
+  color: #fff7d4;
+  border-radius: 999px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  box-shadow: 0 14px 26px rgba(24, 63, 106, 0.18);
+}
+
+.poster-sports-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 8px 0 20px;
+}
+
+.poster-sport-chip {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  box-shadow: 0 10px 20px rgba(18, 59, 89, 0.12);
+}
+
+.poster-sport-chip.accent-red {
+  background: #cf2c21;
+}
+
+.poster-sport-chip.accent-sky {
+  background: #2672d9;
+}
+
+.poster-sport-chip.accent-orange {
+  background: #eb7d11;
+}
+
+.poster-sport-chip.accent-purple {
+  background: #6a46b3;
+}
+
+.poster-sport-chip.accent-green {
+  background: #17884f;
+}
+
+.poster-sport-chip.accent-gold {
+  background: #9a6a21;
+}
+
+.poster-sport-chip.accent-blue {
+  background: #1e57a6;
+}
+
+.poster-sport-chip.accent-lime {
+  background: #4e9615;
+}
+
 .schedule-showcase-head {
   display: flex;
   justify-content: space-between;
   gap: 16px;
   align-items: end;
   margin-bottom: 10px;
+}
+
+.poster-section-title {
+  margin: 0;
+  color: #163c67;
+  font-family: "Rockwell", "Georgia", serif;
+  font-size: clamp(1.7rem, 2vw, 2.4rem);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .schedule-quote,
@@ -427,6 +542,10 @@ textarea {
 
 .schedule-table {
   min-width: 940px;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+  background: rgba(24, 63, 106, 0.03);
 }
 
 .schedule-table thead th:nth-child(1) {
@@ -843,6 +962,11 @@ thead th {
   .schedule-showcase-head {
     flex-direction: column;
     align-items: start;
+  }
+
+  .poster-ribbon,
+  .schedule-quote {
+    width: 100%;
   }
 }
 
