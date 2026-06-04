@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Purva Play Fest 2026</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="festival-page">
+    <div class="scene scene-a"></div>
+    <div class="scene scene-b"></div>
+
+    <header class="topbar shell-width">
+      <a class="brand" href="/">
+        <img src="/assets/ppf-mark.svg" alt="Purva Play Fest 2026 mark" />
+        <div>
+          <span>Purva Swanlake Apartments</span>
+          <strong>Purva Play Fest 2026</strong>
+        </div>
+      </a>
+      <div class="topbar-actions">
+        <div class="count-pill" id="live-count-pill">Loading registrations...</div>
+        <a class="ghost-button" href="/admin">Admin</a>
+      </div>
+    </header>
+
+    <main class="shell-width page-stack">
+      <section class="hero-grid panel">
+        <div class="hero-copy">
+          <p class="eyebrow">Purva Swanlake Sports Club</p>
+          <h1 class="festival-headline">
+            <span class="headline-top">Purva Swanlake</span>
+            <span class="headline-main">Play-Fest <em>2026</em></span>
+          </h1>
+          <p class="headline-ribbon">Play Together. Win Together.</p>
+          <p class="hero-lead">
+            The biggest sporting celebration of our community kicks off on
+            <strong>June 13, 2026</strong> and runs across nearly two months of
+            play, fitness, teamwork, and neighborhood pride.
+          </p>
+          <p class="hero-text">
+            Whether you are a first-timer, a seasoned athlete, a family cheering
+            from the sidelines, or a senior joining the fitness spirit, every
+            registration adds energy to the festival.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#register">Register A Participant</a>
+            <a class="secondary-button" href="#events">View Event Lineup</a>
+          </div>
+          <div class="hero-points">
+            <div>
+              <strong>Stay active</strong>
+              <span>Healthy routines, outdoor energy, and joyful competition.</span>
+            </div>
+            <div>
+              <strong>Build connections</strong>
+              <span>Meet neighbors through teams, brackets, and shared cheers.</span>
+            </div>
+            <div>
+              <strong>Make memories</strong>
+              <span>A season full of stories for children, adults, and seniors alike.</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-board">
+          <div class="board-badge">PPF'26 live season</div>
+          <h2>Resident registration is open</h2>
+          <p>
+            Choose one or more events, pay through UPI / GPay, upload proof, and
+            the sports committee can review everything from the admin console.
+          </p>
+          <div class="hero-stats" id="hero-stats"></div>
+          <div class="mini-timeline">
+            <div>
+              <span>Registration Start</span>
+              <strong>June 1, 2026</strong>
+            </div>
+            <div>
+              <span>Festival Start</span>
+              <strong>June 13, 2026</strong>
+            </div>
+            <div>
+              <span>Rule</span>
+              <strong>Each event closes on its prior Thursday</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="panel schedule-showcase" id="schedule">
+        <div class="schedule-showcase-head">
+          <div>
+            <p class="eyebrow">Official Poster Schedule</p>
+            <h2>Purva Swanlake Play-Fest 2026 event calendar</h2>
+          </div>
+          <div class="schedule-quote">More than a game, it's our community.</div>
+        </div>
+        <p class="section-copy">
+          This schedule reflects the poster lineup shared by the sports committee,
+          now built into the page as a responsive live table.
+        </p>
+        <div class="schedule-table-wrap">
+          <table class="schedule-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Day</th>
+                <th>Time</th>
+                <th>Event</th>
+                <th>Categories</th>
+              </tr>
+            </thead>
+            <tbody id="schedule-table-body"></tbody>
+          </table>
+        </div>
+        <div class="schedule-footer-note">
+          Let's celebrate sports, teamwork, and fun across the entire Purva Swanlake community.
+        </div>
+      </section>
+
+      <section class="info-grid">
+        <article class="panel">
+          <div class="section-heading">
+            <p class="eyebrow">Festival Notes</p>
+            <h2>Why residents will love this</h2>
+          </div>
+          <div class="list-grid">
+            <div class="info-card">
+              <strong>Every participation counts</strong>
+              <span>PPF'26 celebrates spirit, consistency, sportsmanship, and togetherness.</span>
+            </div>
+            <div class="info-card">
+              <strong>Built for all age groups</strong>
+              <span>Children, youth, adults, and seniors all have room to join the season.</span>
+            </div>
+            <div class="info-card">
+              <strong>Simple registration</strong>
+              <span>Select events, make the payment, upload proof, and receive your confirmation instantly.</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="section-heading">
+            <p class="eyebrow">Payment Flow</p>
+            <h2>How entry payment works</h2>
+          </div>
+          <ol class="steps-list">
+            <li>Select the events you want to join.</li>
+            <li>Tap the UPI / GPay button with your total amount.</li>
+            <li>Mention your flat number in the payment remarks.</li>
+            <li>Upload the screenshot or PDF receipt before submitting.</li>
+          </ol>
+          <p class="tone-note" id="gateway-note">
+            A full online checkout provider can be enabled later when committee
+            credentials are available. The current live flow is UPI / GPay with
+            proof upload.
+          </p>
+        </article>
+      </section>
+
+      <section class="panel" id="events">
+        <div class="section-heading">
+          <p class="eyebrow">Lineup</p>
+          <h2>Event lineup and fee schedule</h2>
+        </div>
+        <p class="section-copy">
+          Pick one or more events. The cards below now mirror the official
+          Play-Fest poster schedule while still supporting online registration.
+        </p>
+        <div class="eligibility-note" id="eligibility-message">
+          Select age category and participant type to highlight eligible events.
+        </div>
+        <div class="event-grid" id="event-grid"></div>
+      </section>
+
+      <section class="registration-grid" id="register">
+        <article class="panel">
+          <div class="section-heading">
+            <p class="eyebrow">Registration</p>
+            <h2>Register your entry</h2>
+          </div>
+
+          <form id="registration-form" class="registration-form">
+            <div class="input-grid">
+              <label>
+                <span>Flat Number</span>
+                <input name="flatNumber" placeholder="A-1204" required />
+              </label>
+              <label>
+                <span>Participant Name</span>
+                <input name="participantName" placeholder="Full name" required />
+              </label>
+              <label>
+                <span>Participant Type</span>
+                <select name="participantType" id="participant-type" required>
+                  <option value="">Select type</option>
+                  <option value="child">Child</option>
+                  <option value="adult">Adult</option>
+                </select>
+              </label>
+              <label>
+                <span>Mobile Number</span>
+                <input name="mobileNumber" placeholder="+91 98765 43210" required />
+              </label>
+              <label>
+                <span>Age</span>
+                <input name="age" type="number" min="1" max="100" placeholder="12" required />
+              </label>
+              <label>
+                <span>Age Category</span>
+                <select name="ageCategoryId" id="age-category" required></select>
+              </label>
+              <label>
+                <span>Email (optional)</span>
+                <input name="email" type="email" placeholder="name@example.com" />
+              </label>
+              <label>
+                <span>Payment Reference / Transaction ID</span>
+                <input name="paymentReference" placeholder="UTR / transaction ID" required />
+              </label>
+            </div>
+
+            <label class="upload-field">
+              <span>Payment proof upload</span>
+              <input
+                id="proof-upload"
+                name="proofUpload"
+                type="file"
+                accept=".png,.jpg,.jpeg,.pdf"
+                required
+              />
+              <small>Allowed formats: JPG, PNG, PDF. Maximum file size: 5 MB.</small>
+            </label>
+
+            <input class="honeypot" name="website" tabindex="-1" autocomplete="off" />
+
+            <div class="form-footer">
+              <div class="upload-chip" id="upload-chip">No file selected yet.</div>
+              <button class="primary-button" id="submit-button" type="submit">Submit Registration</button>
+            </div>
+            <p class="form-status" id="form-status"></p>
+          </form>
+        </article>
+
+        <aside class="summary-stack">
+          <article class="panel">
+            <div class="section-heading compact">
+              <p class="eyebrow">Payment</p>
+              <h2>UPI / GPay payment panel</h2>
+            </div>
+            <div class="payment-card" id="payment-card">
+              <div>
+                <span class="meta-label">Payee</span>
+                <strong id="payee-name">Loading...</strong>
+              </div>
+              <div>
+                <span class="meta-label">UPI ID</span>
+                <strong id="upi-id">Loading...</strong>
+              </div>
+              <div>
+                <span class="meta-label">GPay Number</span>
+                <strong id="gpay-number">Loading...</strong>
+              </div>
+              <p id="payment-note" class="tone-note"></p>
+              <div class="payment-actions">
+                <a class="primary-button" id="upi-button" href="#" target="_self">Pay Via UPI App</a>
+                <button class="ghost-button" id="copy-upi-button" type="button">Copy UPI ID</button>
+              </div>
+              <p class="tiny-note">
+                On desktop, the UPI link may open only if a compatible app is installed.
+                You can still pay manually and upload proof below.
+              </p>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="section-heading compact">
+              <p class="eyebrow">Selection</p>
+              <h2>Your registration summary</h2>
+            </div>
+            <div class="summary-list" id="selection-summary"></div>
+          </article>
+        </aside>
+      </section>
+
+      <section class="panel hidden confirmation-panel" id="confirmation-panel"></section>
+    </main>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

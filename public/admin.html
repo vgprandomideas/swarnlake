@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PPF'26 Admin</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="festival-page admin-page">
+    <div class="scene scene-a"></div>
+    <div class="scene scene-b"></div>
+
+    <header class="topbar shell-width">
+      <a class="brand" href="/">
+        <img src="/assets/ppf-mark.svg" alt="Purva Play Fest 2026 mark" />
+        <div>
+          <span>Sports Committee Console</span>
+          <strong>PPF'26 Admin</strong>
+        </div>
+      </a>
+      <div class="topbar-actions">
+        <a class="ghost-button" href="/">Resident View</a>
+        <button class="ghost-button hidden" id="logout-button" type="button">Logout</button>
+      </div>
+    </header>
+
+    <main class="shell-width page-stack">
+      <section class="panel auth-panel" id="login-panel">
+        <div class="section-heading">
+          <p class="eyebrow">Admin Login</p>
+          <h1>Committee control room</h1>
+        </div>
+        <p class="section-copy">
+          Sign in to review registrations, export reports, and update event fees,
+          deadlines, and payment details without touching code.
+        </p>
+
+        <form id="login-form" class="registration-form compact-form">
+          <div class="input-grid">
+            <label>
+              <span>Username</span>
+              <input name="username" placeholder="committee" required />
+            </label>
+            <label>
+              <span>Password</span>
+              <input name="password" type="password" placeholder="Password" required />
+            </label>
+          </div>
+          <div class="form-footer">
+            <button class="primary-button" type="submit">Sign In</button>
+          </div>
+          <p class="form-status" id="login-status"></p>
+        </form>
+      </section>
+
+      <section class="hidden" id="admin-shell">
+        <section class="panel">
+          <div class="section-heading">
+            <p class="eyebrow">Overview</p>
+            <h1>Registration dashboard</h1>
+          </div>
+          <div class="dashboard-grid" id="dashboard-grid"></div>
+        </section>
+
+        <section class="panel">
+          <div class="section-heading">
+            <p class="eyebrow">Reporting</p>
+            <h2>Registrations and export controls</h2>
+          </div>
+
+          <form id="filter-form" class="registration-form compact-form">
+            <div class="input-grid">
+              <label>
+                <span>Search</span>
+                <input name="search" placeholder="Name, flat, event, payment reference" />
+              </label>
+              <label>
+                <span>Event</span>
+                <select name="eventId" id="filter-event"></select>
+              </label>
+              <label>
+                <span>Age Category</span>
+                <select name="ageCategoryId" id="filter-age"></select>
+              </label>
+              <label>
+                <span>Participant Type</span>
+                <select name="participantType">
+                  <option value="">All</option>
+                  <option value="child">Child</option>
+                  <option value="adult">Adult</option>
+                </select>
+              </label>
+              <label>
+                <span>Flat Number</span>
+                <input name="flatNumber" placeholder="A-1204" />
+              </label>
+            </div>
+            <div class="form-footer">
+              <div class="inline-actions">
+                <button class="primary-button" type="submit">Apply Filters</button>
+                <button class="ghost-button" id="reset-filters" type="button">Reset</button>
+              </div>
+              <div class="inline-actions">
+                <a class="ghost-button" id="export-csv" href="#">Export CSV</a>
+                <a class="ghost-button" id="export-xlsx" href="#">Export XLSX</a>
+              </div>
+            </div>
+            <p class="form-status" id="filter-status"></p>
+          </form>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Code</th>
+                  <th>Participant</th>
+                  <th>Flat</th>
+                  <th>Age Group</th>
+                  <th>Events</th>
+                  <th>Fee</th>
+                  <th>Payment Ref</th>
+                  <th>Proof</th>
+                  <th>Submitted</th>
+                </tr>
+              </thead>
+              <tbody id="registration-table"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="admin-columns">
+          <article class="panel">
+            <div class="section-heading">
+              <p class="eyebrow">Settings</p>
+              <h2>Public registration settings</h2>
+            </div>
+            <form id="settings-form" class="registration-form compact-form">
+              <div class="input-grid">
+                <label>
+                  <span>Registration Start Date</span>
+                  <input name="registrationStartDate" type="date" required />
+                </label>
+                <label>
+                  <span>Support Email</span>
+                  <input name="supportEmail" type="email" required />
+                </label>
+                <label>
+                  <span>Support Phone</span>
+                  <input name="supportPhone" required />
+                </label>
+                <label>
+                  <span>Contact Name</span>
+                  <input name="contactName" required />
+                </label>
+                <label>
+                  <span>Default Fee (INR)</span>
+                  <input name="defaultFee" type="number" min="0" required />
+                </label>
+                <label>
+                  <span>Live Count Visible</span>
+                  <select name="liveCountEnabled">
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                  </select>
+                </label>
+                <label>
+                  <span>UPI Payee Name</span>
+                  <input name="upiPayeeName" required />
+                </label>
+                <label>
+                  <span>UPI ID</span>
+                  <input name="upiId" required />
+                </label>
+                <label>
+                  <span>GPay Number</span>
+                  <input name="gpayNumber" required />
+                </label>
+                <label class="full-span">
+                  <span>Payment Note</span>
+                  <textarea name="note" rows="3"></textarea>
+                </label>
+                <label>
+                  <span>Gateway Provider</span>
+                  <input name="gatewayProvider" />
+                </label>
+                <label>
+                  <span>Gateway Enabled</span>
+                  <select name="gatewayEnabled">
+                    <option value="false">No</option>
+                    <option value="true">Yes</option>
+                  </select>
+                </label>
+                <label class="full-span">
+                  <span>Gateway Label</span>
+                  <textarea name="gatewayLabel" rows="2"></textarea>
+                </label>
+              </div>
+              <div class="form-footer">
+                <button class="primary-button" type="submit">Save Settings</button>
+              </div>
+              <p class="form-status" id="settings-status"></p>
+            </form>
+          </article>
+
+          <article class="panel">
+            <div class="section-heading">
+              <p class="eyebrow">Schedule</p>
+              <h2>Event manager</h2>
+            </div>
+            <div class="event-admin-grid" id="event-admin-grid"></div>
+
+            <div class="event-divider"></div>
+
+            <h3 class="subheading">Add new event</h3>
+            <form id="add-event-form" class="registration-form compact-form">
+              <div class="input-grid">
+                <label>
+                  <span>Event Name</span>
+                  <input name="name" required />
+                </label>
+                <label>
+                  <span>Category</span>
+                  <input name="category" required />
+                </label>
+                <label>
+                  <span>Week Label</span>
+                  <input name="weekLabel" required />
+                </label>
+                <label>
+                  <span>Event Date</span>
+                  <input name="eventDate" type="date" required />
+                </label>
+                <label>
+                  <span>Closing Time</span>
+                  <input name="closeAt" type="datetime-local" required />
+                </label>
+                <label>
+                  <span>Fee (INR)</span>
+                  <input name="fee" type="number" min="0" required />
+                </label>
+                <label>
+                  <span>Venue</span>
+                  <input name="venue" value="Purva Swanlake Apartments" required />
+                </label>
+                <label>
+                  <span>Format</span>
+                  <input name="format" value="Individual" />
+                </label>
+                <label>
+                  <span>Participant Types</span>
+                  <select name="allowedParticipantTypes" multiple size="2">
+                    <option value="child">Child</option>
+                    <option value="adult">Adult</option>
+                  </select>
+                </label>
+                <label>
+                  <span>Age Categories</span>
+                  <select name="allowedAgeCategoryIds" id="add-event-age-categories" multiple size="6"></select>
+                </label>
+                <label class="full-span">
+                  <span>Description</span>
+                  <textarea name="description" rows="3"></textarea>
+                </label>
+              </div>
+              <div class="form-footer">
+                <button class="primary-button" type="submit">Create Event</button>
+              </div>
+              <p class="form-status" id="event-status"></p>
+            </form>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <script type="module" src="/admin.js"></script>
+  </body>
+</html>

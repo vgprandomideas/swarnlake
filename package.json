@@ -1,0 +1,11 @@
+{
+  "name": "purva-play-fest-2026",
+  "version": "1.0.0",
+  "description": "Standalone registration website for Purva Play Fest 2026.",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node tests/run-tests.js"
+  }
+}

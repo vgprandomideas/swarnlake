@@ -1,0 +1,49 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path id="topArc" d="M 92 256 A 164 164 0 0 1 420 256" />
+    <path id="bottomArc" d="M 400 352 A 172 172 0 0 1 112 352" />
+    <filter id="shadow" x="24" y="20" width="464" height="472" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#0C2335" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <circle cx="256" cy="256" r="236" fill="#FFF8CC"/>
+    <circle cx="256" cy="256" r="226" fill="#18354B"/>
+    <circle cx="256" cy="256" r="216" fill="#FFF8CC"/>
+    <circle cx="256" cy="256" r="206" fill="#33917E"/>
+
+    <path d="M52 256H164V322H52V256Z" fill="#18354B"/>
+    <path d="M348 256H460V322H348V256Z" fill="#18354B"/>
+    <path d="M104 322H408C385 381 327 420 256 420C185 420 127 381 104 322Z" fill="#F6B447"/>
+
+    <circle cx="256" cy="256" r="132" fill="#FFF8CC"/>
+    <circle cx="256" cy="256" r="144" stroke="#18354B" stroke-width="18"/>
+    <circle cx="256" cy="256" r="154" stroke="#FFF8CC" stroke-width="8"/>
+
+    <g fill="#FFFFFF">
+      <path d="M80 292L87 309H105L91 319L96 336L80 326L64 336L69 319L55 309H73L80 292Z"/>
+      <path d="M108 286L117 308H140L121 321L128 344L108 330L88 344L95 321L76 308H99L108 286Z"/>
+      <path d="M136 292L143 309H161L147 319L152 336L136 326L120 336L125 319L111 309H129L136 292Z"/>
+      <path d="M376 292L383 309H401L387 319L392 336L376 326L360 336L365 319L351 309H369L376 292Z"/>
+      <path d="M404 286L413 308H436L417 321L424 344L404 330L384 344L391 321L372 308H395L404 286Z"/>
+      <path d="M432 292L439 309H457L443 319L448 336L432 326L416 336L421 319L407 309H425L432 292Z"/>
+    </g>
+
+    <g fill="#050505">
+      <path d="M332 151C316 151 303 157 293 167C271 189 271 223 292 242C305 253 311 270 319 288C327 309 338 327 352 342C367 358 384 371 405 385C404 370 401 357 394 343C380 313 358 286 347 265C337 247 334 235 337 222C340 210 348 203 358 203C366 203 374 208 380 216C379 203 375 191 367 178C359 163 347 151 332 151Z"/>
+      <path d="M330 170C334 168 339 168 344 170C349 172 352 176 354 181C349 180 345 178 341 176C336 174 333 172 330 170Z"/>
+      <path d="M152 300C168 322 192 332 215 330C239 328 257 316 279 315C302 314 327 323 348 337C364 348 380 362 400 378L392 386C359 373 335 363 304 357C282 353 259 352 238 354C211 357 188 366 168 381C181 360 197 347 215 340C231 333 249 332 263 331C248 326 232 324 214 325C192 327 172 334 153 349C144 325 143 307 152 300Z"/>
+      <path d="M151 324C178 345 218 347 248 342C266 339 282 334 302 336C265 345 232 358 206 381C181 375 161 355 151 324Z"/>
+      <path d="M220 390C235 381 253 377 270 376C292 375 312 381 327 393C315 391 303 391 291 393C275 395 261 400 248 409C236 407 226 401 220 390Z"/>
+      <path d="M235 407C250 399 267 398 282 401C297 404 309 411 317 421C305 425 292 427 279 427C261 427 246 422 235 407Z"/>
+    </g>
+
+    <text fill="#FFF8CC" font-size="38" font-family="Arial, Helvetica, sans-serif" font-weight="800" letter-spacing="8">
+      <textPath href="#topArc" startOffset="50%" text-anchor="middle">SWANLAKE</textPath>
+    </text>
+    <text fill="#18354B" font-size="36" font-family="Arial, Helvetica, sans-serif" font-weight="900" letter-spacing="4">
+      <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">SPORTS CLUB</textPath>
+    </text>
+  </g>
+</svg>
